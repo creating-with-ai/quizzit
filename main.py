@@ -746,15 +746,13 @@ def main():
         'client_secret': os.environ.get('REDDIT_CLIENT_SECRET', 'YOUR_CLIENT_SECRET'),
         'username': os.environ.get('REDDIT_USERNAME', 'YOUR_BOT_USERNAME'),
         'password': os.environ.get('REDDIT_PASSWORD', 'YOUR_BOT_PASSWORD'),
-        'user_agent': 'RapidTriviaBot v1.0 by /u/YourUsername'
-    }
-    
+        'user_agent': os.envieon.get('REDDIT_USER_AGENT')
     supabase_config = {
         'url': os.environ.get('SUPABASE_URL', 'YOUR_SUPABASE_URL'),
         'key': os.environ.get('SUPABASE_KEY', 'YOUR_SUPABASE_ANON_KEY')
     }
     
-    subreddit_name = os.environ.get('SUBREDDIT_NAME', 'test_trivia')
+    subreddit_name = os.environ.get('SUBREDDIT_NAME', 'RedditTrivia')
     
     bot = TriviaBot(reddit_config, supabase_config)
     bot.run(subreddit_name, rapid_fire_mode=True)  # Rapid fire mode enabled!
