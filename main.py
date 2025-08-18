@@ -824,7 +824,7 @@ def main():
         'key': os.environ.get('SUPABASE_KEY', 'YOUR_SUPABASE_ANON_KEY')
     }
     
-    subreddit_name = os.environ.get('SUBREDDIT_NAME', 'test_trivia')
+    subreddit_name = os.environ.get('SUBREDDIT_NAME', 'reddittrivia')
     
     bot = TriviaBot(reddit_config, supabase_config)
     bot.run(subreddit_name, rapid_fire_mode=True)  # Rapid fire mode enabled!
